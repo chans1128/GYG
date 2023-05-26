@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "686700160064",
+    "firebase_url": "https://growyourgreen-50f20-default-rtdb.firebaseio.com",
+    "project_id": "growyourgreen-50f20",
+    "storage_bucket": "growyourgreen-50f20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686700160064:android:85b989f2e1f64d110d2ba5",
+        "android_client_info": {
+          "package_name": "com.example.gyg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686700160064-jbktl3ajk4isajrde4busr70hgmjvj5f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gyg",
+            "certificate_hash": "f12af3eb5a5704fc2a53396b66d59c6992987485"
+          }
+        },
+        {
+          "client_id": "686700160064-7h4ag7q0vfu2jj4fkc03t9b3ucn51bi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuPKlWrmkX7W9OZQHuRema7Y8excbmPIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686700160064-7h4ag7q0vfu2jj4fkc03t9b3ucn51bi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
