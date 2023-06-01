@@ -1,14 +1,589 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F3F1EE"
     tools:context=".Ranking.RankingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:elevation="10sp"
+                    android:orientation="vertical"
+                    android:padding="15sp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5sp"
+                        android:gravity="center"
+                        android:text="🌱"
+                        android:textColor="#417933"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:padding="10sp"
+                    android:text="🏆이번 주 포인트 랭킹"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rank2_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Lv. 3"
+                            android:textColor="@color/headText_color1"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank2_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🌹"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:id="@+id/rank2_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🥈 차미"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank2_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1890 포인트"
+                            android:textColor="@color/text_color1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rank1_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Lv. 4"
+                            android:textColor="@color/headText_color1"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank1_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🌷"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:id="@+id/rank1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🥇 소복"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank1_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1990 포인트"
+                            android:textColor="@color/text_color1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rank3_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Lv. 2"
+                            android:textColor="@color/headText_color1"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank3_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🌼"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:id="@+id/rank3_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="🥉 꼬야"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rank3_point"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1740 포인트"
+                            android:textColor="@color/text_color1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:textColor="@color/text_color1"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="달이"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1680포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="5"
+                        android:textColor="@color/text_color1"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="재롱이"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1640포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="6"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="산지"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1570포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="7"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="제로"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1440포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="8"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="하루"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1310포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="9"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="꼼데"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1120포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="10"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="가르송"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1030포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="20sp"
+                    android:layout_weight="1"
+                    android:text="주간 포인트 랭킹은 10등까지 표시돼요."
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="나의등수🏅"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_background_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:text="20"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="3"
+                        android:text="새싹이"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="830포인트"
+                        android:textColor="@color/text_color1"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
