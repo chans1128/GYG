@@ -53,8 +53,7 @@
                     android:background="@drawable/layout_checkbox"
                     android:button="@android:color/transparent"
                     android:checked="false"
-                    android:cursorVisible="false"
-                    android:editable="true" />
+                    android:cursorVisible="false"/>
 
             </LinearLayout>
 

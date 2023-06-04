@@ -173,7 +173,7 @@ class HomeMissionFragment : Fragment() {
                     checkButtonArr[0].isEnabled = true
                     checkButtonArr[0].isChecked = false
                     binding.dailyMission1.paintFlags = 0
-                    binding.dailyMission4.setTextColor(Color.rgb(41, 79, 33))
+                    binding.dailyMission1.setTextColor(Color.rgb(65, 121, 51))
                 }
                 if (mission2SuccessOrNot == "true") {
                     checkButtonArr[1].isEnabled = false
@@ -185,7 +185,7 @@ class HomeMissionFragment : Fragment() {
                     checkButtonArr[1].isEnabled = true
                     checkButtonArr[1].isChecked = false
                     binding.dailyMission2.paintFlags = 0
-                    binding.dailyMission2.setTextColor(Color.rgb(41, 79, 33))
+                    binding.dailyMission2.setTextColor(Color.rgb(65, 121, 51))
                 }
                 if (mission3SuccessOrNot == "true") {
                     checkButtonArr[2].isEnabled = false
@@ -197,7 +197,7 @@ class HomeMissionFragment : Fragment() {
                     checkButtonArr[2].isEnabled = true
                     checkButtonArr[2].isChecked = false
                     binding.dailyMission3.paintFlags = 0
-                    binding.dailyMission3.setTextColor(Color.rgb(41, 79, 33))
+                    binding.dailyMission3.setTextColor(Color.rgb(65, 121, 51))
                 }
                 if (mission4SuccessOrNot == "true") {
                     checkButtonArr[3].isEnabled = false
@@ -209,7 +209,7 @@ class HomeMissionFragment : Fragment() {
                     checkButtonArr[3].isEnabled = true
                     checkButtonArr[3].isChecked = false
                     binding.dailyMission4.paintFlags = 0
-                    binding.dailyMission4.setTextColor(Color.rgb(41, 79, 33))
+                    binding.dailyMission4.setTextColor(Color.rgb(65, 121, 51))
                 }
                 if (bonusMissionSuccessOrNot == "true") {
                     checkButtonArr[4].isEnabled= false
@@ -221,7 +221,7 @@ class HomeMissionFragment : Fragment() {
                     checkButtonArr[4].isEnabled = true
                     checkButtonArr[4].isChecked = false
                     binding.BonusMission.paintFlags = 0
-                    binding.BonusMission.setTextColor(Color.rgb(41, 79, 33))
+                    binding.BonusMission.setTextColor(Color.rgb(65, 121, 51))
                 }
                 if (mission1SuccessOrNot == "true" && mission2SuccessOrNot == "true" && mission3SuccessOrNot == "true" && mission4SuccessOrNot == "true") {
                     binding.bonusMissionCheck.isEnabled = true

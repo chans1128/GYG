@@ -95,7 +95,7 @@ class HomeMissionCertification : DialogFragment() {
 
     val storage = FirebaseStorage.getInstance() // 스토리지 인스턴스를 만들고
     var storageRef = storage.getReference() //스토리지 인스턴스를 참조
-    val pathRef = storageRef.child("/certify/")
+    val pathRef = storageRef
 
     //파이어베이스 사진 업로드도 성공~!~!~!
     private fun initAddImageButton() {
@@ -160,7 +160,7 @@ class HomeMissionCertification : DialogFragment() {
     private fun initSubmitItemButton() {
         binding.certificationYesBtn.setOnClickListener {
             if (imageUri != null) {
-                pathRef.putFile(imageUri!!)
+                pathRef.child("certify").putFile(imageUri!!)
                 missionSuccess()
             } else {
                 Toast.makeText(activity, "미션을 성공하려면 사진을 업로드해야 해요.", Toast.LENGTH_SHORT).show()
