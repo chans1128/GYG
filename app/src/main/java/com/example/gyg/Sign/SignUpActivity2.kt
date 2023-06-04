@@ -97,7 +97,7 @@ class SignUpActivity2 : AppCompatActivity() {
                                 val currentDate: LocalDateTime = LocalDateTime.now()
                                 myRef.child("User").child(user_uid).child("PlantInfo").child("plant_level").setValue(1) // 식물레벨
                                 myRef.child("User").child(user_uid).child("PlantInfo").child("plant_point").setValue(0) // 식물포인트
-                                myRef.child("User").child(user_uid).child("PlantInfo").child("plant_growth_point").setValue(0) //식물성장치(%단위)
+                                myRef.child("User").child(user_uid).child("PlantInfo").child("plant_growth_rate").setValue(0) //식물성장치(%단위)
                                 myRef.child("User").child(user_uid).child("UserInfo").child("user_point").setValue(0) //사용자현재포인트
                                 myRef.child("User").child(user_uid).child("UserInfo").child("user_signup_date").setValue(currentDate.format(
                                     DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR"))

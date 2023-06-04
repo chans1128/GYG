@@ -21,7 +21,7 @@ import java.time.LocalDateTime
 class HomePlantFragment : Fragment() {
     private lateinit var myRef: DatabaseReference
     private lateinit var binding: FragmentHomePlantBinding
-    var nickname = "새싹이"
+    var nickname = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,15 +36,6 @@ class HomePlantFragment : Fragment() {
     private fun initData() {
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-
-        val currentDate: LocalDateTime = LocalDateTime.now()
-
-//        myRef.child("PlantInfo").child("plant_level").setValue(1) // 식물레벨
-//        myRef.child("PlantInfo").child("plant_point").setValue(100) // 식물포인트
-//        myRef.child("PlantInfo").child("plant_growth_rate").setValue(33) //식물성장치(%단위)
-//        myRef.child("UserInfo").child("user_point").setValue(0) //사용자현재포인트
-//        myRef.child("UserInfo").child("user_signup_date").setValue(currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR"))
-//        )) //가입날짜
 
         myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
         myRef.addValueEventListener(object : ValueEventListener {

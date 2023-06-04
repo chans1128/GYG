@@ -57,7 +57,6 @@ class HomeWatering : DialogFragment() {
                     snapshot.child("PlantInfo").child("plant_level").value.toString().toInt()
                 userPoint = snapshot.child("UserInfo").child("user_point").value.toString().toInt()
                 binding.wateringUserPoint.text = userPoint.toString()
-//                checkLevel()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -86,7 +85,6 @@ class HomeWatering : DialogFragment() {
                     checkLevel()
                 } else {
                     Toast.makeText(getActivity(), "포인트가 부족해요😢", Toast.LENGTH_SHORT).show()
-                    Toast.makeText(activity, "$plantGrowthRate:r,$plantLevel:l,$plantPoint:p", Toast.LENGTH_SHORT).show()
 
                 }
             }
@@ -114,7 +112,6 @@ class HomeWatering : DialogFragment() {
             myRef.child("PlantInfo").child("plant_point").setValue(0)
             myRef.child("PlantInfo").child("plant_level").setValue(plantLevel+1)
             myRef.child("PlantInfo").child("plant_growth_rate").setValue(0)
-//            dismiss()
             Toast.makeText(activity, "레벨업!🎉", Toast.LENGTH_SHORT).show()
         }
     }

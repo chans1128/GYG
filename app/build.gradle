@@ -70,10 +70,7 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.google.firebase:firebase-database-ktx'
     implementation 'com.google.firebase:firebase-database:20.2.2'
-<<<<<<< HEAD
     implementation 'com.google.firebase:firebase-storage-ktx:20.2.0'
-=======
->>>>>>> 257e7b9c36f058d60fc12dab543b9c626d56317b
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

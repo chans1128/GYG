@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="320dp"
-    android:layout_height="550dp"
+    android:layout_height="500dp"
     android:layout_gravity="center_horizontal"
     android:layout_margin="20sp"
     android:background="@drawable/layout_background"
@@ -38,17 +38,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
-
-                <Button
+                <ImageButton
                     android:id="@+id/tipAddBtn"
-                    android:layout_width="45sp"
+                    android:layout_width="35sp"
                     android:layout_height="35sp"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="@color/background_color"
-                    android:text="+"
-                    android:textColor="@color/text_color1"
-                    android:textSize="14sp"
-                    app:iconPadding="0dp" />
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/plus" />
+
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -74,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:text="▷ "
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tip1"
@@ -84,7 +82,7 @@
                         android:elevation="10sp"
                         android:text="동물성 기름이 아니면 세제 없이 설거지해도 돼요."
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -97,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="▷ "
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tip2"
@@ -107,7 +105,7 @@
                         android:elevation="5sp"
                         android:text="플라스틱 이외의 빨대 종류로는 유리 빨대, 스테인리스 빨대, 대나무 빨대, 종이 빨대 등이 있어요."
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -122,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:text="▷ "
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tip5"
@@ -132,7 +130,7 @@
                         android:elevation="5sp"
                         android:text="물티슈는 플라스틱으로 짜여진 원단을 사용하여 미세 플라스틱을 배출해요."
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -146,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:text="▷ "
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tip4"
@@ -156,7 +154,7 @@
                         android:elevation="5sp"
                         android:text="냉장고 안은 60% 정도만 채우는 것이 적당해요."
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -170,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:text="▷ "
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tip3"
@@ -178,9 +176,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10sp"
                         android:elevation="5sp"
+                        android:padding="5sp"
                         android:text="찬물 세탁이 전력 소비를 줄여요."
                         android:textColor="@color/text_color1"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -204,22 +203,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/itemAddBtn"
-                    android:layout_width="45sp"
+                    android:layout_width="35sp"
                     android:layout_height="35sp"
-                    android:layout_gravity="center_vertical"
-                    android:backgroundTint="@color/background_color"
-                    android:text="+"
-                    android:textColor="@color/text_color1"
-                    android:textSize="14sp"
-                    app:iconPadding="0dp" />
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/plus" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -248,9 +246,10 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="사진을 클릭하면 구매페이지로 이동해요"
+                android:text="사진을 클릭하면 구매페이지로 이동해요."
+                android:layout_margin="5sp"
                 android:textColor="@color/text_color1"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
 
         </LinearLayout>
     </ScrollView>
