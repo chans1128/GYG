@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#F3F1EE"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1EE"
     tools:context=".Ranking.RankingFragment">
 
 
@@ -15,7 +15,7 @@ android:background="#F3F1EE"
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -24,22 +24,18 @@ android:background="#F3F1EE"
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="#FFFFFF"
                     android:elevation="10sp"
-                    android:orientation="vertical"
-                    android:padding="15sp">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5sp"
-                        android:gravity="center"
-                        android:text="🌱"
-                        android:textColor="#417933"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="30dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center|center_vertical"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/plant" />
 
                 </LinearLayout>
 
@@ -50,12 +46,12 @@ android:background="#F3F1EE"
                     android:padding="10sp"
                     android:text="🏆이번 주 포인트 랭킹"
                     android:textColor="@color/black"
-                    android:textSize="26sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200sp"
+                    android:layout_height="220sp"
                     android:layout_margin="10sp"
                     android:background="@drawable/layout_background_white"
                     android:orientation="horizontal">
@@ -72,20 +68,18 @@ android:background="#F3F1EE"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Lv. 3"
+                            android:text="Lv. 4"
                             android:textColor="@color/headText_color1"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank2_img"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="100sp"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="🌹"
-                            android:textSize="40sp" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/flower" />
 
                         <TextView
                             android:id="@+id/rank2_name"
@@ -98,15 +92,6 @@ android:background="#F3F1EE"
                             android:textSize="24sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank2_point"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1890 포인트"
-                            android:textColor="@color/text_color1" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -121,20 +106,18 @@ android:background="#F3F1EE"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Lv. 4"
+                            android:text="Lv. 5"
                             android:textColor="@color/headText_color1"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank1_img"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="100sp"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="🌷"
-                            android:textSize="40sp" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/fruit" />
 
                         <TextView
                             android:id="@+id/rank1_name"
@@ -147,15 +130,6 @@ android:background="#F3F1EE"
                             android:textSize="26sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank1_point"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1990 포인트"
-                            android:textColor="@color/text_color1" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -170,20 +144,18 @@ android:background="#F3F1EE"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Lv. 2"
+                            android:text="Lv. 3"
                             android:textColor="@color/headText_color1"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank3_img"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="match_parent"
+                            android:layout_height="100sp"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="🌼"
-                            android:textSize="40sp" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/stem" />
 
                         <TextView
                             android:id="@+id/rank3_name"
@@ -196,15 +168,6 @@ android:background="#F3F1EE"
                             android:textSize="24sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/rank3_point"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="1740 포인트"
-                            android:textColor="@color/text_color1" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -246,7 +209,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1680포인트"
+                        android:text="Lv.3"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
 
@@ -291,7 +254,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1640포인트"
+                        android:text="Lv. 3"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -335,7 +298,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1570포인트"
+                        android:text="Lv. 3"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -363,6 +326,7 @@ android:background="#F3F1EE"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/rank7_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
@@ -379,7 +343,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1440포인트"
+                        android:text="Lv. 2"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -423,7 +387,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1310포인트"
+                        android:text="Lv. 2"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -467,7 +431,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1120포인트"
+                        android:text="Lv. 2"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -495,6 +459,7 @@ android:background="#F3F1EE"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/rank10_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
@@ -511,7 +476,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="1030포인트"
+                        android:text="Lv. 1"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -549,18 +514,20 @@ android:background="#F3F1EE"
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/user_rank"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20sp"
                         android:layout_marginTop="10sp"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
-                        android:text="20"
+                        android:text="10"
                         android:textColor="@color/gray"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/ranking_userName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
@@ -570,6 +537,7 @@ android:background="#F3F1EE"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/ranking_plantLevel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10sp"
@@ -577,7 +545,7 @@ android:background="#F3F1EE"
                         android:layout_marginBottom="10sp"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="830포인트"
+                        android:text="Lv. 1"
                         android:textColor="@color/text_color1"
                         android:textSize="16sp" />
                 </LinearLayout>

@@ -1,198 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="330sp"
-android:layout_height="550sp"
-android:layout_gravity="center_horizontal"
-android:layout_margin="20sp"
-android:background="@drawable/layout_background"
-android:backgroundTint="@color/white"
-android:padding="20sp"
-tools:context=".Home.HomeMissionFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="550dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="20sp"
+    android:background="@drawable/layout_background"
+    android:backgroundTint="@color/white"
+    android:padding="10sp"
+    tools:context=".Home.HomeMissionFragment">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10sp"
-        android:padding="10sp"
-        android:text="🏃데일리 미션"
-        android:textColor="@color/headText_color1"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="@drawable/layout_background"
-        android:orientation="horizontal"
-        android:padding="10sp">
-
-        <TextView
-            android:id="@+id/dailyMission1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="텀블러 or 다회용 빨대 사용하기"
-            android:textColor="@color/text_color1"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/dailyMissionCheck1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10sp"
-            android:text="✔"
-            android:textColor="@color/text_color1"
-            android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="🏃데일리 미션"
+                android:textColor="@color/headText_color1"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal"
+                android:padding="10sp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="@drawable/layout_background"
-        android:orientation="horizontal"
-        android:padding="10sp">
+                <TextView
+                    android:id="@+id/dailyMission1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="텀블러 사용하기"
+                    android:textColor="@color/text_color1"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/dailyMission2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="대중교통 이용하기"
-            android:textColor="@color/text_color1"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <CheckBox
+                    android:id="@+id/mission1_check"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/layout_checkbox"
+                    android:button="@android:color/transparent"
+                    android:checked="false"
+                    android:cursorVisible="false"
+                    android:editable="true" />
 
-        <TextView
-            android:id="@+id/dailyMissionCheck2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10sp"
-            android:text="✔"
-            android:textColor="@color/text_color1"
-            android:textSize="20sp" />
+            </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="@drawable/layout_background"
-        android:orientation="horizontal"
-        android:padding="10sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal"
+                android:padding="10sp">
 
-        <TextView
-            android:id="@+id/dailyMission3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="일회용 티슈 대신 손수건 사용"
-            android:textColor="@color/text_color1"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/dailyMission2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="대중교통 이용하기"
+                    android:textColor="@color/text_color1"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/dailyMissionCheck3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10sp"
-            android:text="✔"
-            android:textColor="@color/text_color1"
-            android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/mission2_check"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/layout_checkbox"
+                    android:button="@android:color/transparent" />
+            </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="@drawable/layout_background"
-        android:orientation="horizontal"
-        android:padding="10sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal"
+                android:padding="10sp">
 
-        <TextView
-            android:id="@+id/dailyMission4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="종이 대신 전자문서 사용"
-            android:textColor="@color/text_color1"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/dailyMission3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="손수건 사용하기"
+                    android:textColor="@color/text_color1"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/dailyMissionCheck4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10sp"
-            android:text="✔"
-            android:textColor="@color/text_color1"
-            android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/mission3_check"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/layout_checkbox"
+                    android:button="@android:color/transparent" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:background="@drawable/layout_background"
+                android:orientation="horizontal"
+                android:padding="10sp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/dailyMissonRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_mission"
-        />
+                <TextView
+                    android:id="@+id/dailyMission4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="전자문서 사용하기"
+                    android:textColor="@color/text_color1"
+                    android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/mission4_check"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/layout_checkbox"
+                    android:button="@android:color/transparent"
+                    android:clickable="false" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10sp"
-            android:paddingLeft="10sp"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:text="🌻 보너스 미션"
-            android:textColor="@color/headText_color1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dailyMissonRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="완료 시 추가 포인트를 획득해요"
-            android:textColor="@color/headText_color1"
-            android:textSize="10sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:background="@drawable/layout_background"
-        android:backgroundTint="@color/background_color"
-        android:orientation="horizontal"
-        android:padding="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:layout_margin="10sp"
+                    android:text="🌻 보너스 미션"
+                    android:textColor="@color/headText_color1"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/BonusMission1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="데일리 미션을 모두 완료하면 수행할 수 있어요."
-            android:textColor="@color/text_color1"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            </LinearLayout>
 
-    </LinearLayout>
-</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="완료 시 추가 포인트를 획득해요"
+                android:layout_margin="10sp"
+                android:textColor="@color/headText_color1"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/layout_background"
+                android:backgroundTint="@color/background_color"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/BonusMission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="데일리 미션을 모두 완료하면 수행할 수 있어요."
+                    android:textColor="@color/text_color1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/bonusMission_check"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/layout_checkbox"
+                    android:button="@android:color/transparent"
+                    android:enabled="false"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </FrameLayout>
