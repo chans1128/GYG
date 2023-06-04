@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitStart"
-                android:src="@drawable/sprout" />
+                android:src="@drawable/sprout2" />
 
             <EditText
                 android:id="@+id/select"

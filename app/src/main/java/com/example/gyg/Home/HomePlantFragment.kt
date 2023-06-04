@@ -16,7 +16,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import java.time.LocalDateTime
 
 class HomePlantFragment : Fragment() {
     private lateinit var myRef: DatabaseReference
@@ -75,10 +74,10 @@ class HomePlantFragment : Fragment() {
     }
 
     private fun setImage(level: Int) {
-        if (level == 1) binding.homePlantImg.setImageResource(R.drawable.seed)
-        else if (level == 2) binding.homePlantImg.setImageResource(R.drawable.sprout)
-        else if (level == 3) binding.homePlantImg.setImageResource(R.drawable.stem)
-        else if (level == 4) binding.homePlantImg.setImageResource(R.drawable.flower)
-        else if (level == 5) binding.homePlantImg.setImageResource(R.drawable.fruit)
+        if (level == 1) binding.homePlantImg.setImageResource(R.drawable.plant_seed)
+        else if (level == 2) binding.homePlantImg.setImageResource(R.drawable.plant_sprout)
+        else if (level == 3) binding.homePlantImg.setImageResource(R.drawable.plant_stem)
+        else if (level == 4) binding.homePlantImg.setImageResource(R.drawable.plant_flower)
+        else if (level == 5) binding.homePlantImg.setImageResource(R.drawable.plant_fruit)
     }
 }

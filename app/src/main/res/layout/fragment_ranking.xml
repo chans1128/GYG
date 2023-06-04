@@ -79,7 +79,7 @@
                             android:layout_height="100sp"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/flower" />
+                            android:src="@drawable/plant_flower" />
 
                         <TextView
                             android:id="@+id/rank2_name"
@@ -117,7 +117,7 @@
                             android:layout_height="100sp"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/fruit" />
+                            android:src="@drawable/plant_fruit" />
 
                         <TextView
                             android:id="@+id/rank1_name"
@@ -155,7 +155,7 @@
                             android:layout_height="100sp"
                             android:layout_weight="1"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/stem" />
+                            android:src="@drawable/plant_stem" />
 
                         <TextView
                             android:id="@+id/rank3_name"
