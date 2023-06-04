@@ -69,11 +69,55 @@
 
 
                 <EditText
-                    android:id="@+id/input_Id"
+                    android:id="@+id/input_Name"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint="이름"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <EditText
+                    android:id="@+id/input_Num"
                     android:layout_width="270dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint="전화번호"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <EditText
+                    android:id="@+id/input_Id"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
                     android:background="@drawable/box_id"
                     android:ems="10"
                     android:hint="이메일(ID)"

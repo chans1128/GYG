@@ -44,6 +44,13 @@
         <activity android:name=".Sign.SignUpActivity2"
             android:exported="true"
             />
+        <activity android:name=".Sign.Sign_Finding_ID"
+            android:exported="true"
+            />
+
+        <activity android:name=".Sign.Sign_Finding_PW"
+            android:exported="true"
+            />
 
         <activity
             android:name=".MainActivity"
