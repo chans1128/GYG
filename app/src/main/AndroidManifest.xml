@@ -3,9 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+=======
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+>>>>>>> 257e7b9c36f058d60fc12dab543b9c626d56317b
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
@@ -26,7 +35,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYG"
         tools:targetApi="31">
-
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
         <activity
             android:name=".Sign.SignInActivity"
             android:banner="@drawable/app_icon_your_company"
@@ -42,6 +51,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Sign.SignUpActivity2"
+            android:exported="true"
+            />
+        <activity android:name=".Sign.Sign_Finding_ID"
+            android:exported="true"
+            />
+
+        <activity android:name=".Sign.Sign_Finding_PW"
             android:exported="true"
             />
 

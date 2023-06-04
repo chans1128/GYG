@@ -37,14 +37,14 @@ class SignInActivity : AppCompatActivity() {
         binding.BtnSignIn.setOnClickListener({
             signIn()
         })
-        /*
+
         binding.BtnFindingID.setOnClickListener({
             changeActivity(Sign_Finding_ID::class.java)
         })
         binding.BtnFindingPW.setOnClickListener({
             changeActivity(Sign_Finding_PW::class.java)
         })
-        */
+
 
     }
 

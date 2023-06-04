@@ -25,6 +25,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:backgroundTint="#1F9B00"
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -44,22 +45,45 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
+<!--                <TextView-->
+<!--                    android:id="@+id/textView537"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="이름"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/user_name"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_span="2"-->
+<!--                    android:ems="10"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:minHeight="48dp" />-->
                 <TextView
-                    android:id="@+id/textView537"
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="이름"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/user_name"
+                    android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
                     android:ems="10"
+                    android:backgroundTint="@color/black"
                     android:textColor="@color/black"
                     android:inputType="textPersonName"
                     android:minHeight="48dp" />
@@ -72,24 +96,47 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
+<!--                <TextView-->
+<!--                    android:id="@+id/textView57"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="이메일(ID)"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/user_id"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_span="2"-->
+<!--                    android:ems="10"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:minHeight="48dp" />-->
                 <TextView
-                    android:id="@+id/textView57"
+                    android:id="@+id/textView5322"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="아이디"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="이메일(ID)"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/user_id"
+                    android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
                     android:ems="10"
+                    android:backgroundTint="@color/black"
                     android:textColor="@color/black"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:minHeight="48dp" />
 
             </TableRow>
@@ -101,52 +148,102 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
+<!--                <TextView-->
+<!--                    android:id="@+id/textView6"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="전화번호"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/user_phone"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_span="2"-->
+<!--                    android:ems="10"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:inputType="date"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textView50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="전화번호"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/user_phone"
+                    android:layout_marginRight="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
                     android:ems="10"
+                    android:backgroundTint="@color/black"
                     android:textColor="@color/black"
-                    android:inputType="date"
-                    android:minHeight="48dp"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp">
 
                 <Button
                     android:id="@+id/Btn_Finding_PW_Next"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:layout_span="1"
-                    android:textColor="@color/black"
-                    android:text="비밀번호 재설정"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="#1F9B00"
+                    android:text="찾기"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/Btn_PW_Cancel"
-                    android:layout_width="wrap_content"
+                    android:backgroundTint="#1F9B00"
+                    android:layout_gravity="center"
+                    android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:layout_span="2"
-                    android:textColor="@color/black"
                     android:text="취소"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
-            </TableRow>
+            </LinearLayout>
+<!--            <TableRow-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="30dp">-->
+
+<!--                <Button-->
+<!--                    android:backgroundTint="#1F9B00"-->
+<!--                    android:id="@+id/Btn_Finding_PW_Next"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_marginLeft="30dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="확인"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <Button-->
+<!--                    android:backgroundTint="#1F9B00"-->
+<!--                    android:id="@+id/Btn_PW_Cancel"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="취소"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </TableRow>-->
 
             <!--            <TableRow-->
             <!--                android:layout_width="match_parent"-->
