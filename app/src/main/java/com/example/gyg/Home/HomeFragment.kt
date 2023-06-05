@@ -71,10 +71,10 @@ class HomeFragment : Fragment() {
         myRef.addValueEventListener(object : ValueEventListener {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onDataChange(snapshot: DataSnapshot) {
-                val signupDate = snapshot.child("UserInfo").child("user_signup_date").value.toString()
-                val startDate = SimpleDateFormat("yyyyMMdd",Locale("ko", "KR")).parse(signupDate)
-                val endDate = SimpleDateFormat("yyyyMMdd",Locale("ko", "KR")).parse(todayDate.toString())
-                val days =(endDate.time - startDate.time) / (24 * 60 * 60 * 1000) +1
+                var signupDate = snapshot.child("UserInfo").child("user_signup_date").value.toString()
+                var startDate = SimpleDateFormat("yyyyMMdd",Locale("ko", "KR")).parse(signupDate)
+                var endDate = SimpleDateFormat("yyyyMMdd",Locale("ko", "KR")).parse(todayDate.toString())
+                var days =(endDate.time - startDate.time) / (24 * 60 * 60 * 1000) +1
                 binding.daysTextBottom.text="%d일 째 초록을 키우는 중🍀".format(days)
 }
             override fun onCancelled(error: DatabaseError) {

@@ -41,8 +41,8 @@ class HomePlantFragment : Fragment() {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onDataChange(snapshot: DataSnapshot) {
                 nickname = snapshot.child("UserInfo").child("user_nickname").value.toString()
-                val plantLevel = snapshot.child("PlantInfo").child("plant_level").value.toString()
-                val plantGrowthRate =
+                var plantLevel = snapshot.child("PlantInfo").child("plant_level").value.toString()
+                var plantGrowthRate =
                     snapshot.child("PlantInfo").child("plant_growth_rate").value.toString()
                 binding.homeName.text = nickname.substring(0, nickname.indexOf("#"))
                 binding.homeLevel.text = "Lv.$plantLevel"

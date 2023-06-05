@@ -72,7 +72,8 @@ class HomeWatering : DialogFragment() {
 
         binding.wateringYesBtn.setOnClickListener() {
             if(plantLevel>5){
-                Toast.makeText(getActivity(), "최고 레벨에 도달하여 더 이상 물을 줄 수 없어요.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "최고 레벨에 도달하여 더 이상 물을 줄 수 없어요.", Toast.LENGTH_SHORT).show()
+                dialog?.dismiss()
             }else {
                 Toast.makeText(activity, "$plantGrowthRate:r,$plantLevel:l,$plantPoint:p", Toast.LENGTH_SHORT).show()
                 if (userPoint >= 100) {
@@ -101,7 +102,7 @@ class HomeWatering : DialogFragment() {
         } else if (plantLevel == 4) {
             return 1000
         } else if (plantLevel == 5) {
-            return 150
+            return 1500
         } else {
             return -1
         }
@@ -113,6 +114,12 @@ class HomeWatering : DialogFragment() {
             myRef.child("PlantInfo").child("plant_level").setValue(plantLevel+1)
             myRef.child("PlantInfo").child("plant_growth_rate").setValue(0)
             Toast.makeText(activity, "레벨업!🎉", Toast.LENGTH_SHORT).show()
+            dialog?.dismiss()
         }
+//        if(plantLevel>=6){
+//            myRef.child("PlantInfo").child("plant_point").setValue(1500)
+//            myRef.child("PlantInfo").child("plant_level").setValue(5)
+//            myRef.child("PlantInfo").child("plant_growth_rate").setValue(100)
+//        }
     }
 }

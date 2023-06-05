@@ -31,6 +31,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.coroutines.NonCancellable.cancel
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -160,8 +161,10 @@ class HomeMissionCertification : DialogFragment() {
     private fun initSubmitItemButton() {
         binding.certificationYesBtn.setOnClickListener {
             if (imageUri != null) {
-                pathRef.child("certify").putFile(imageUri!!)
+                pathRef.child("certify/").child(missionNum.toString()).putFile(imageUri!!)
                 missionSuccess()
+                dialog?.dismiss()
+
             } else {
                 Toast.makeText(activity, "미션을 성공하려면 사진을 업로드해야 해요.", Toast.LENGTH_SHORT).show()
             }
