@@ -1,36 +1,31 @@
 package com.example.gyg.Community
 
-import android.Manifest
-import android.app.Activity
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
 import android.widget.ImageView
-import androidx.core.content.ContextCompat
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.gyg.R
 import com.example.gyg.databinding.FragmentCommunityCertifyBinding
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ListResult
+
 
 class Community_certify : DialogFragment() {
     private lateinit var binding: FragmentCommunityCertifyBinding
     val storage = FirebaseStorage.getInstance() // 스토리지 인스턴스를 만들고
     var storageRef = storage.getReference() //스토리지 인스턴스를 참조
-    val pathRef = storageRef.child("/certify/bag.jpg")
-    val pathRef2 = storageRef.child("/certify/tumbler.jpg")
-    val pathRef3 = storageRef.child("/certify/recycling.png")
-    val pathRef4 = storageRef.child("/certify/bus.jpg")
-    val pathRef5 = storageRef.child("/certify/subway.jpg")
-    val pathRef6 = storageRef.child("/certify/bag.jpg")
+    val pathRef = storageRef.child("/certify/")
     lateinit var imageUri: Uri
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,21 +37,51 @@ class Community_certify : DialogFragment() {
         inflater: LayoutInflater , container: ViewGroup? ,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCommunityCertifyBinding.inflate(inflater, container, false)
-        //loadImage(binding.Fimage)
+        binding = FragmentCommunityCertifyBinding.inflate(inflater , container , false)
+
+        pathRef.listAll()
+            .addOnSuccessListener(OnSuccessListener<ListResult> { listResult ->
+                // 폴더 내의 item이 동날 때까지 모두 가져온다.
+                for (item in listResult.items) {
+
+                    // imageview를 생성할 레이아웃 id 받아오기
+                    val layout = binding.iamgeLayout
+
+                    //imageview 동적생성
+                    val iv = ImageView(context)
+                    iv.scaleType = ImageView.ScaleType.CENTER_CROP
+                    val layoutParams =
+                        LinearLayout.LayoutParams(300 , 300) // Set size (width, height in pixels)
+                    layoutParams.setMargins(16 , 16 , 16 , 16)
+                    layoutParams.gravity = Gravity.CENTER
+                    iv.layoutParams = layoutParams
+                    layout.addView(iv)
+
+                    // reference의 item(이미지) url 받아오기
+                    item.downloadUrl.addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            // Glide 이용하여 이미지뷰에 로딩
+                            Glide.with(iv.context)
+                                .load(task.result)
+                                .centerCrop()
+                                .into(iv)
+                        } else {
+                            // URL을 가져오지 못하면 토스트 메세지
+                            Toast.makeText(
+                                context ,
+                                task.exception!!.message ,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }.addOnFailureListener {
+                        // Uh-oh, an error occurred!
+                    }
+                }
+            })
+
         binding.cancel.setOnClickListener {
             dismiss()
         }
-        //initAddImageButton()
-        //initSubmitItemButton()
-        loadImage(binding.Fimage)
-        loadImage(binding.Fimage2)
-        loadImage(binding.Fimage3)
-        loadImage(binding.Fimage4)
-        loadImage(binding.Fimage5)
-        loadImage(binding.Fimage6)
-
-
 
         return binding.root
     }
@@ -71,41 +96,7 @@ class Community_certify : DialogFragment() {
                 .centerCrop()
                 .into(imageView)
         }
-        pathRef2.downloadUrl.addOnSuccessListener { uri ->
-            Glide.with(imageView.context)
-                .load(uri)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .into(imageView)
-        }
-        pathRef3.downloadUrl.addOnSuccessListener { uri ->
-            Glide.with(imageView.context)
-                .load(uri)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .into(imageView)
-        }
-        pathRef4.downloadUrl.addOnSuccessListener { uri ->
-            Glide.with(imageView.context)
-                .load(uri)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .into(imageView)
-        }
-        pathRef5.downloadUrl.addOnSuccessListener { uri ->
-            Glide.with(imageView.context)
-                .load(uri)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .into(imageView)
-        }
-        pathRef6.downloadUrl.addOnSuccessListener { uri ->
-            Glide.with(imageView.context)
-                .load(uri)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .centerCrop()
-                .into(imageView)
-        }
+
     }
 
     // 파이어베이스 사진 업로드도 성공~!~!~!
@@ -171,8 +162,6 @@ class Community_certify : DialogFragment() {
 //        const val REQUEST_FIRST = 1000
 //        const val REQUEST_GET_IMAGE = 2000
 //    }
-
-
 
 
 }
