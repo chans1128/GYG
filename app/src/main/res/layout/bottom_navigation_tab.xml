@@ -125,34 +125,34 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/btn_bottom_navi_myinfo_tab"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/btn_bottom_navi_myinfo_tab"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_centerInParent="true">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_centerInParent="true">-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_margin="5dp"
-                android:src="@drawable/baseline_people_24" />
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:src="@drawable/baseline_people_24" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:text="내 정보"
-                android:textSize="12dp"/>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:textAlignment="center"-->
+<!--                android:text="내 정보"-->
+<!--                android:textSize="12dp"/>-->
 
-        </LinearLayout>
-    </RelativeLayout>
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
 
 </LinearLayout>
