@@ -8,12 +8,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#F3F1EE">
+        android:background="#F3F1EE"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F3F1EE"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="615dp"
+            android:layout_height="600dp"
             android:orientation="vertical">
 
             <ImageView
@@ -51,8 +57,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0px"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
@@ -60,7 +67,6 @@
                     android:layout_width="123dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:layout_marginLeft="70dp"
                     android:backgroundTint="#FFFFFF"
                     android:text="로그인"
                     android:textColor="#1F9B00"
@@ -71,8 +77,8 @@
                     android:id="@+id/Btn_Sign_Up"
                     android:layout_width="123dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:inputType="textPersonName"
@@ -85,63 +91,49 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginTop="10dp">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-<!--            <Button-->
-<!--                android:id="@+id/Btn_Sign_Up"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#FFFFFF"-->
-<!--                android:ems="10"-->
-<!--                android:inputType="textPersonName"-->
-<!--                android:text="회원가입"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="12sp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                app:layout_constraintVertical_bias="1.0" />-->
 
-<!--            <Button-->
-<!--                android:id="@+id/Btn_Finding_ID"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:backgroundTint="#FFFFFF"-->
-<!--                android:ems="10"-->
-<!--                android:gravity="center"-->
-<!--                android:inputType="textPersonName"-->
-<!--                android:text="아이디 찾기"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="12sp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                app:layout_constraintVertical_bias="1.0" />-->
+            <Button
+                android:id="@+id/Btn_Finding_ID"
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#F3F1EE"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="아이디 찾기"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintVertical_bias="1.0" />
 
-<!--            <Button-->
-<!--                android:id="@+id/Btn_Finding_PW"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:backgroundTint="#FFFFFF"-->
-<!--                android:ems="10"-->
-<!--                android:gravity="center"-->
-<!--                android:inputType="textPersonName"-->
-<!--                android:text="비밀번호 찾기"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="12sp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                app:layout_constraintVertical_bias="1.0" />-->
-<!--        </LinearLayout>-->
+            <Button
+                android:id="@+id/Btn_Finding_PW"
+                android:layout_width="123dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#F3F1EE"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="비밀번호 찾기"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintVertical_bias="1.0" />
+        </LinearLayout>
     </LinearLayout>
 
 

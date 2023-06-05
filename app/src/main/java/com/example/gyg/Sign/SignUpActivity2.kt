@@ -2,21 +2,15 @@ package com.example.gyg.Sign
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import com.example.gyg.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.gyg.databinding.ActivitySignUp2Binding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -54,12 +48,22 @@ class SignUpActivity2 : AppCompatActivity() {
         .toString()
         .padStart(number.toString().length, '0')
 
+    private fun getTime(): String? {
+        val now = System.currentTimeMillis()
+        val date = Date(now)
+        val dateFormat =
+            SimpleDateFormat("yyyy-MM-dd")
+        return dateFormat.format(date)
+    }
+
     @RequiresApi(Build.VERSION_CODES.O)
     private fun signUp(){
 
         if(binding.inputId.length()>0&&binding.inputPw.length()>0&&binding.inputPwCheck.length()>0&&binding.inputNickname.length()>0){
             var id = binding.inputId.text.toString()
             var pw = binding.inputPw.text.toString()
+            var user_name = binding.inputName.text.toString()
+            var user_num = binding.inputNum.text.toString()
             var pw_ck = binding.inputPwCheck.text.toString()
             if(pw == pw_ck) {
                 mAuth?.createUserWithEmailAndPassword(id, pw)
@@ -73,15 +77,31 @@ class SignUpActivity2 : AppCompatActivity() {
                             var user_id = binding.inputId.text.toString()
                             var user_pw = binding.inputPw.text.toString()
                             var user_nickname = binding.inputNickname.text.toString()+ "#" +generateCertificationNumber()
+                            var user_date = getTime().toString()
 
 
                             if (user_uid != null) {
+                                myRef.child("User").child(user_uid).child("UserInfo")
+                                    .child("user_name").setValue(user_name)
+                                myRef.child("User").child(user_uid).child("UserInfo")
+                                    .child("user_phone").setValue(user_num)
+
                                 myRef.child("User").child(user_uid).child("UserInfo")
                                     .child("user_id").setValue(user_id)
                                 myRef.child("User").child(user_uid).child("UserInfo")
                                     .child("user_pw").setValue(user_pw)
                                 myRef.child("User").child(user_uid).child("UserInfo")
                                     .child("user_nickname").setValue(user_nickname)
+//                                myRef.child("User").child(user_uid).child("UserInfo")
+//                                    .child("user_date").setValue(user_date)
+                                val currentDate: LocalDateTime = LocalDateTime.now()
+                                myRef.child("User").child(user_uid).child("PlantInfo").child("plant_level").setValue(1) // 식물레벨
+                                myRef.child("User").child(user_uid).child("PlantInfo").child("plant_point").setValue(0) // 식물포인트
+                                myRef.child("User").child(user_uid).child("PlantInfo").child("plant_growth_rate").setValue(0) //식물성장치(%단위)
+                                myRef.child("User").child(user_uid).child("UserInfo").child("user_point").setValue(0) //사용자현재포인트
+                                myRef.child("User").child(user_uid).child("UserInfo").child("user_signup_date").setValue(currentDate.format(
+                                    DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR"))
+                                )) //가입날짜
                             }
 
                             val user = mAuth!!.currentUser

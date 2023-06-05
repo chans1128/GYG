@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gyg.MainActivity
 import com.example.gyg.R
 import com.example.gyg.databinding.FragmentHomeDailyTipBinding
 import com.google.firebase.database.DatabaseReference
@@ -22,7 +23,20 @@ class HomeDailyTipFragment : Fragment() {
     ): View? {
         binding = FragmentHomeDailyTipBinding.inflate(layoutInflater)
 //        initDailyMissonList()
-        return inflater.inflate(R.layout.fragment_home_daily_tip, container, false)
+        val mainActivity = activity as MainActivity
+        binding.itemAddBtn.setOnClickListener{
+            mainActivity.selectTab(0)
+        }
+        binding.tipAddBtn.setOnClickListener{
+            mainActivity.selectTab(1)
+        }
+        binding.imageView1.setOnClickListener{
+            mainActivity.selectTab(0)
+        }
+        binding.imageView2.setOnClickListener{
+            mainActivity.selectTab(0)
+        }
+        return binding.root
     }
 
 //    private fun initDailyMissonList(){

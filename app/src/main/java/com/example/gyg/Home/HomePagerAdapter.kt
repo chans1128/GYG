@@ -2,7 +2,6 @@ package com.example.gyg.Home
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-
 class HomePageAdapter(private val fragmentActivity: HomeFragment) : FragmentStateAdapter(fragmentActivity) {
     val fragments = mutableListOf<Fragment>()
 
@@ -11,4 +10,5 @@ class HomePageAdapter(private val fragmentActivity: HomeFragment) : FragmentStat
 
     //특정 포지션에 연결된 새로운 Fragment를 제공하는 기능을 가진 메소드
     override fun createFragment(position: Int): Fragment = fragments[position]
+
 }
