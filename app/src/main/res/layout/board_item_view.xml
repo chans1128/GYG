@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bd"
+    android:id="@+id/item_board">
+
+    <TextView
+        android:id="@+id/item_board_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:layout_marginLeft="8sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        tools:text="TITLE" />
+
+    <TextView
+        android:id="@+id/item_board_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:layout_marginLeft="8sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Contents" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:text="Time" />
+
+        <TextView
+            android:id="@+id/item_board_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            tools:text="Writer" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/item_board_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            tools:text="💚"/>
+        <TextView
+            android:id="@+id/item_board_goodCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="10sp"
+            tools:text="0"/>
+
+        <!-- 중략 -->
+
+    </LinearLayout>
+
+</LinearLayout>
