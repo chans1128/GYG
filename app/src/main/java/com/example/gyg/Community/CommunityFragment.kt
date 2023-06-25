@@ -55,7 +55,7 @@ class CommunityFragment : Fragment() {
                 content = snapshot.child(userID.toString()).child("content").getValue().toString()
                 writer = snapshot.child(userID.toString()).child("writer").getValue().toString()
                 date = snapshot.child(userID.toString()).child("date").getValue().toString()
-                good = snapshot.child(userID.toString()).child("good").getValue().toString().toInt()
+//                good = snapshot.child(userID.toString()).child("good").getValue().toString().toInt()
                 binding.h1.text = title
                 binding.h2.text = content
                 binding.h3.text = ""
