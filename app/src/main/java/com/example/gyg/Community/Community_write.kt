@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,7 +24,7 @@ class Community_write : DialogFragment() {
     private lateinit var binding: FragmentCommunityWriteBinding
 
     val database = Firebase.database
-    val myRef = database.getReference("Board")
+    val myRef = database.getReference(FBRef.Board.toString())
 
     lateinit var board: Community_MyBoard
 
@@ -42,7 +43,7 @@ class Community_write : DialogFragment() {
         // 취소 버튼 이벤트
         binding.cancel.setOnClickListener {
             dismiss() // 사라져 버리기~~
-            // toast msg 띄우기 or 알림창
+            Toast.makeText(getActivity(),"글 작성이 취소되었습니다.",Toast.LENGTH_SHORT).show();
         }
 
         // 확인 버튼 이벤트 -> 파이어베이스에 데이터 저장, 어댑터 -> 게시판에 나타내기

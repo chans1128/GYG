@@ -27,10 +27,10 @@ import kotlin.properties.Delegates
 class CommunityFragment : Fragment() {
     private lateinit var binding: FragmentCommunityBinding
     val database = Firebase.database
-    val myRef = database.getReference("Board")
-    val myRef2 = database.getReference("InfoBoard")
+    val myRef = database.getReference(FBRef.Board.toString())
+    val myRef2 = database.getReference(FBRef.InfoBoard.toString())
     val storage = FirebaseStorage.getInstance() // 스토리지 인스턴스를 만들고
-    var storageRef = storage.getReference() //스토리지 인스턴스를 참조
+    //var storageRef = storage.getReference() //스토리지 인스턴스를 참조
 
     // 현재 user 가져오기
     val user = FirebaseAuth.getInstance().currentUser
@@ -48,35 +48,6 @@ class CommunityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCommunityBinding.inflate(inflater , container , false)
-
-        myRef.addValueEventListener(object: ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                title = snapshot.child(userID.toString()).child("title").getValue().toString()
-                content = snapshot.child(userID.toString()).child("content").getValue().toString()
-                writer = snapshot.child(userID.toString()).child("writer").getValue().toString()
-                date = snapshot.child(userID.toString()).child("date").getValue().toString()
-//                good = snapshot.child(userID.toString()).child("good").getValue().toString().toInt()
-                binding.h1.text = title
-                binding.h2.text = content
-                binding.h3.text = ""
-                binding.h4.text = date + "     💚 0"
-            }
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })
-        myRef2.addValueEventListener(object: ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                title = snapshot.child(userID.toString()).child("title").getValue().toString()
-                content = snapshot.child(userID.toString()).child("content").getValue().toString()
-                binding.i1.text = title
-                binding.i2.text = content
-            }
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })
-
 
         setButtonClickEvent()
 

@@ -82,93 +82,97 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
+
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/bd"
-            android:orientation="vertical">
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/i1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="perfect tumbler"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/i2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="https://pilmoa.com/?n_media... 더보기"
-                android:textColor="#000000"
-                android:textSize="12dp" />
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="perfect tumbler"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="https://pilmoa.com/?n_media... 더보기"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="샴푸바 추천"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="https://pilmoa.com/?n_media... 더보기"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="바구니 추천"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="https://pilmoa.com/?n_media... 더보기"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/bd"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="샴푸바 추천"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="https://pilmoa.com/?n_media... 더보기"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/bd"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="바구니 추천"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="https://pilmoa.com/?n_media... 더보기"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-        </LinearLayout>
-    </LinearLayout>
-
-
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -185,6 +189,7 @@
                 android:textColor="#000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+
             <Button
                 android:id="@+id/write2"
                 android:layout_width="120dp"
@@ -195,139 +200,22 @@
                 android:textColor="#000000" />
 
         </LinearLayout>
-        <LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/boardRecyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_margin="10dp"
-            android:background="@drawable/box"
-            android:orientation="vertical">
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/board_item_view"/>
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/h1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="hi"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/h2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="hi~~~~"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:id="@+id/h3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="Nice to meet you"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:id="@+id/h4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="7dp"
-                android:text="2023-06-05 10:13     💚 0"
-                android:textColor="#000000"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_margin="10dp"
-            android:background="@drawable/box"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="저 레벨업했어용!!"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="우와와왕"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="근데 저보다 높으신 분들 되게되게 많더라고용,,,"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="7dp"
-                android:text="2023-05-23 14:23     💚 2"
-                android:textColor="#000000"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_margin="10dp"
-            android:background="@drawable/box"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="hi~~~!!"
-                android:textColor="#000000"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="저 에코백 좋은 거 찾았어용"
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="링크는 달아드릴게요.... 더보기..."
-                android:textColor="#000000"
-                android:textSize="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="7dp"
-                android:text="2023-05-12 18:31     💚 34"
-                android:textColor="#000000"
-                android:textSize="10dp" />
-
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
