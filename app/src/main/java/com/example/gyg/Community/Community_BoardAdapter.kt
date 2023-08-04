@@ -42,6 +42,9 @@ class Community_BoardAdapter(var item_list: ArrayList<Community_MyBoard>): Recyc
         holder.writer.text = data.getWriter()
         holder.date.text = data.getDate()
         holder.goodCount.text = data.getGood().toString()
+
+//        firebase 저장
+
     }
 
     override fun getItemCount(): Int {
@@ -51,7 +54,7 @@ class Community_BoardAdapter(var item_list: ArrayList<Community_MyBoard>): Recyc
         return 1
     }
 
-    // 커스텀 리스너 인터페이스 정의
+    // 커스텀 리스너 인터페이스 정의, item 누르면 글 자세히 보일 수 있도록
     interface onItemClickListener {
         fun onItemClick(view: View, position: Int)
     }

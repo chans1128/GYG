@@ -51,6 +51,9 @@ class CommunityFragment : Fragment() {
 
         setButtonClickEvent()
 
+
+
+
         return binding.root
     }
 
