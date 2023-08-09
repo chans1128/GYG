@@ -24,9 +24,11 @@ class Community_write : DialogFragment() {
     private lateinit var binding: FragmentCommunityWriteBinding
 
     val database = Firebase.database
-    val myRef = database.getReference(FBRef.Board.toString())
+    val boardRef = database.getReference(FBRef.Board.toString())
+    val replyRef = database.getReference(FBRef.Reply.toString())
 
     lateinit var board: Community_MyBoard
+    lateinit var comment: Community_MyComment
 
     // 현재 user 가져오기
     val user = FirebaseAuth.getInstance().currentUser
@@ -46,37 +48,28 @@ class Community_write : DialogFragment() {
             Toast.makeText(getActivity(),"글 작성이 취소되었습니다.",Toast.LENGTH_SHORT).show();
         }
 
-        // 확인 버튼 이벤트 -> 파이어베이스에 데이터 저장, 어댑터 -> 게시판에 나타내기
+        // 확인 버튼 이벤트 -> 파이어베이스에 데이터 저장, 리사이클러뷰
         binding.finish.setOnClickListener {
-            //var myRef2 = database.getReference("User").child(userID.toString()).child("UserInfo").child("count_writing")
-            var myRef3 = database.getReference("User").child(userID.toString()).child("UserInfo").child("user_nickname")
-            val title = binding.title.text.toString()
-            val content = binding.content.text.toString()
+            val boardRef2 = database.getReference(FBRef.User.toString()).child(userID.toString()).child(FBRef.UserInfo.toString()).child(FBRef.UserNickname.toString())
+            var postKey = ""
+            val title = binding.title.text.toString() // 제목 받아오기
+            val content = binding.content.text.toString() // 내용 받아오기
             var writer = ""
-            var date = convertTimestampToDate(currentTime).toString()
+            var date = convertTimestampToDate(currentTime)
 
-            myRef3.addListenerForSingleValueEvent(object: ValueEventListener{
+            boardRef2.addListenerForSingleValueEvent(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     writer = snapshot.getValue().toString() // 닉네임 받아오기
-                    board = Community_MyBoard(title, content, writer, date, 0)
-                    myRef.child(userID.toString()).setValue(board)
+                    postKey = boardRef.push().key.toString() // 키 생성
+                    board = Community_MyBoard(postKey, title, content, writer, date, 0)
+                    boardRef.child(postKey).setValue(board) // Board에 게시글 저장
+                    replyRef.child(postKey).setValue(null) // Reply에 게시글 key 값 저장
+                    // 여기서 리사이클러뷰 처리를 하든, adapter class에서 처리를 하든
                 }
                 override fun onCancelled(error: DatabaseError) {
 
                 }
             })
-
-
-//            myRef2.addListenerForSingleValueEvent(object: ValueEventListener {
-//
-//                override fun onDataChange(snapshot: DataSnapshot) {
-//                    if(userID != null) {
-//                        board = Community_MyBoard(title, content, writer, date, 0)
-//                        myRef.push().setValue(board)
-//                    }
-//                }
-//                override fun onCancelled(error: DatabaseError) {}
-//            })
             dismiss()
         }
         return binding.root

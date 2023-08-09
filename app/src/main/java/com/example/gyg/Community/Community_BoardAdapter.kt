@@ -43,7 +43,9 @@ class Community_BoardAdapter(var item_list: ArrayList<Community_MyBoard>): Recyc
         holder.date.text = data.getDate()
         holder.goodCount.text = data.getGood().toString()
 
-//        firebase 저장
+        // db
+
+
 
     }
 

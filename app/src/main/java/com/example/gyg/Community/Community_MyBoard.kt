@@ -1,11 +1,12 @@
 package com.example.gyg.Community
 import java.io.Serializable
 
-class Community_MyBoard(Title: String, Content: String
+class Community_MyBoard(Key: String, Title: String, Content: String
                         , Writer: String, Date: String, Good: Int):Serializable {
 
  /*   private var writerId: String
     private var id: String*/
+    private var key: String
     private var title : String
     private var content : String
     private var writer : String
@@ -17,6 +18,7 @@ class Community_MyBoard(Title: String, Content: String
     init {
         /*this.id = Id
         this.writerId = WriterId*/
+        this.key = Key
         this.title = Title
         this.content = Content
         this.writer = Writer
@@ -33,6 +35,9 @@ class Community_MyBoard(Title: String, Content: String
     fun getWriterId(): String {
         return this.writerId
     }*/
+    fun getKey(): String{
+        return this.key
+    }
 
     fun getTitle(): String {
         return this.title
